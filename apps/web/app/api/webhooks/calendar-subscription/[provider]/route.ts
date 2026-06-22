@@ -58,6 +58,7 @@ async function postHandler(request: NextRequest, ctx: { params: Promise<Params> 
 
   const office365ValidationToken = getOffice365ValidationToken(providerFromParams, request);
   if (office365ValidationToken !== null) {
+    log.debug("Responding to Office365 validation token request");
     return new Response(office365ValidationToken, {
       status: 200,
       headers: {
