@@ -55,9 +55,8 @@ describe("handleNewBooking", () => {
           name: "Booker",
         });
 
-        const startDateTimeOrganizerTz = dayjs(plus1DateString)
-          .endOf("day")
-          .tz(newYorkTimeZone)
+        const startDateTimeOrganizerTz = dayjs
+          .tz(plus1DateString, newYorkTimeZone)
           .hour(10)
           .minute(30)
           .second(0)

@@ -66,7 +66,7 @@ const hasSlotForBookingStart = ({
   duration: number;
   timeZone: string;
 }) => {
-  const frequency = eventType.slotInterval || duration || eventType.length;
+  const frequency = eventType.slotInterval ?? eventType.length;
 
   const slots = getSlots({
     inviteeDate: startDateTimeUtc.tz(timeZone),
